@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resilia 3.0</title>
+</head>
+
+<body>
+
+
+    <script>
+        //tem que receber o custo das pizzas
+        // tem que receber o valor da pizza
+        //receber o nome da pizza
+        //calcular o lucro da pizza
+        //calcular o lucro líquido
+
+        function recebePizza(precoPizza, valorPizza, nomePizza) {
+
+            var impostoPizza = valorPizza * (8.9 / 100);
+            var lucroLiquido = valorPizza - precoPizza - impostoPizza;
+            return (" Para a pizza " + nomePizza + " o lucro líquido é de R$" + lucroLiquido + " e o imposto é de " + impostoPizza);
+
+        }
+
+        document.write(recebePizza(10, 19.90, "Calabresa "));
+
+    </script>
+</body>
+
+</html>

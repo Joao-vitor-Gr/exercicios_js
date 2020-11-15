@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicios 1a6</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Exércicio 1
+    
+    function escreveParametros(palavra1, palavra2) {
+        document.write(palavra1 + palavra2)
+
+    }
+
+    escreveParametros("Olá ", "resiliente!")
+    document.write("<br><br>")
+
+
+
+    // Exércicio 2 
+
+    function cumprimentarPessoa(nome) {
+        document.write(`Olá ${nome} <br> Tudo bem ${nome}`)
+    }
+
+    cumprimentarPessoa("Resiliente")
+    document.write("<br><br>")
+
+    // Exércicio 3
+
+    function calculaResto(numero) {
+        document.write(`O resto de ${numero} é: ${numero % 9}`)
+    }
+
+    calculaResto(19)
+    document.write("<br><br>")
+
+    // Exércicio 4
+
+    function permiteDirigir(idadeUsuario, idadePermitida) {
+        if (idadeUsuario < idadePermitida) {
+            document.write("Você não pode dirigir.")
+        } else {
+            document.write("Você pode dirigir.")
+        }
+    }
+
+    permiteDirigir(17, 18)
+    document.write("<br><br>")
+
+    // Exércicio 5
+
+    function permiteBeber(idadeUsuario, idadePermitida) {
+        if (idadeUsuario >= idadePermitida) {
+            document.write("Você pode beber")
+        } else {
+            document.write("Você não pode beber")
+        }
+    }
+
+    permiteBeber(18, 18)
+    document.write("<br><br>")
+
+    // Exércicio 6
+
+    function testarSemaforo(corSemaforo) {
+        if (corSemaforo == "verde") {
+            document.write("Pode passar!")
+        } else if (corSemaforo == "amarelo") {
+            document.write("melhor freiar")
+        } else {
+            document.write("pare já!")
+        }
+    }
+
+    testarSemaforo("verde")
+    document.write("<br><br>")
+</script>
+
+</html>

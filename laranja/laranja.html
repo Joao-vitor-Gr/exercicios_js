@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laranja</title>
+</head>
+
+<style>
+    body{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+img{
+    padding: 0 2%;
+}
+
+.dados{
+    flex-grow: 1;
+}
+
+.resposta{
+    flex-basis: 100%;
+    text-align: center;
+}
+</style>
+
+<body>
+
+   
+    <div class="dados">
+        <label>Quantas laranjas Anderson tem?</label>
+        <input id="numeroLaranjas" type="number">
+        <br>
+        <br>
+        <label>Quantos vizinhos tem?</label>
+        <input id="numeroVizinhos" type="number">
+        <br>
+        <br>
+        <button onclick="divideLaranjas()">Dividir entre os vizinhos</button>
+    </div>
+    <div class="resposta">
+        <span id="laranjaVizinho"></span>
+        <br>
+        <span id="sobraJoselito"></span>
+    </div>
+
+</body>
+
+<script>
+    function divideLaranjas() {
+        var laranjas = document.getElementById("numeroLaranjas").value;
+        var vizinhos = document.getElementById("numeroVizinhos").value;
+
+        var laranjaVizinho = document.querySelector("#laranjaVizinho");
+        var sobraJoselito = document.querySelector("#sobraJoselito");
+
+        var divisao = Math.trunc(laranjas / vizinhos);
+        var resto = laranjas % vizinhos;
+
+
+
+        if (laranjas < 0) {
+            laranjaVizinho.innerHTML = '<h1>Laranjas negativas?</h1>';
+        } else if (vizinhos < 0) {
+            laranjaVizinho.innerHTML = '<h1>Vizinhos negativos?</h1>';
+        } else if (laranjas == 0) {
+            laranjaVizinho.innerHTML = '<h1>Você não tem laranjas';
+        } else if (vizinhos == 0) {
+            laranjaVizinho.innerHTML = '<h2>Você não tem amigos</h2>';
+        } else if (divisao == 0) {
+            laranjaVizinho.innerHTML = '<h1>Me parece que seus vizinhos ficarão com fome</h1>'
+        } else {
+            laranjaVizinho.innerHTML = '<h1>Tome ' + divisao + ' laranjas</h1><img src="https://www.sodexobeneficios.com.br/data/files/9C/71/E3/25/625D0710064C5A077118F9C2/xos-poderes-da-laranja.jpg.pagespeed.ic.AUB0M9f2IJ.jpg">';
+
+        }
+
+
+        if (resto == 0 && vizinhos > 0 && laranjas > 0) {
+            sobraJoselito.innerHTML = '<h2>Não sobrou nada</h2><img scr="data:image/jpeg;base64,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">';
+        } else if (resto != 0 && vizinhos > 0 && laranjas > 0) {
+            sobraJoselito.innerHTML = '<h2>Sobrará ' + resto + ' laranjas a mais para Anderson</h2>';
+        }
+    }
+</script>
+
+</html>

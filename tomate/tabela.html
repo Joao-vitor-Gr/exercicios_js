@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tabela.css">
+  <title>Resilia 3.0</title>
+</head>
+
+<body>
+
+  <table class="table">
+    <!-- <tr>
+          <th>Alimento</th>
+          <th>Preço</th> 
+          <th>Data</th>
+        </tr>
+        <tr>
+          <td>tomate</td>
+          <td>47</td>
+          <td>54</td>
+        </tr>
+        <tr>
+          <td>Arroz</td>
+          <td>47</td>
+          <td>54</td>
+        </tr>
+        <tr>
+          <td>Cenoura</td>
+          <td>47</td>
+          <td>80</td>
+        </tr>
+      </table> -->
+
+
+    <script>
+      function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+      }
+
+      function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
+
+
+      function mediaProdutos(preco1, preco2) {
+        var mediaProdutos = ((preco1 + preco2) / 2);
+        return mediaProdutos
+      }
+
+      var tomate = mediaProdutos(3.30, 4.70);
+      var arroz = mediaProdutos(2.99, 3.25);
+      var cenoura = mediaProdutos(3.99, 4.14);
+
+      mostra(" A média do tomate é " + tomate);
+      mostra(" A média do arroz é " + arroz);
+      mostra(" A média da cenoura é " + cenoura);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de cesar</title>
+</head>
+
+<body>
+    <script>
+
+        function cifrandoCesar(frase, deslocamento) {
+            var arrayFrase = frase.split("")
+
+            var arrChar = []
+
+            for (var i = 0; i < arrayFrase.length; i++) {
+                arrChar.push(arrayFrase[i].charCodeAt() + deslocamento)
+            }
+
+            var arrCode = []
+
+            for (var i = 0; i < arrChar.length; i++) {
+                arrCode.push(String.fromCharCode(arrChar[i]))
+            }
+
+
+            return arrCode.join("")
+        }
+
+        document.write(cifrandoCesar('Ola Mundo', 4))
+
+    </script>
+</body>
+
+</html>
